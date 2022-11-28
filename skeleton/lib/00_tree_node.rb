@@ -1,12 +1,22 @@
 class PolyTreeNode
+
+    attr_reader :parent, :children, :value 
+
     def initialize(value)
-        Node.new = hash
-        self.parent = nil
-        self.children = []
+        @value = value
+        @parent = nil
+        @children = []
     end
 
-    def parent=
-        node2.parent = node1
+    def parent=(new_parent)
+        self.parent = new_parent
+        self.parent.children.delete(self)
     end
+
+    # def children
+    #     @children = []
+    # end
+
+
 
 end
